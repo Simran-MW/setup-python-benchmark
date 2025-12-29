@@ -22,3 +22,6 @@ jobs:
         run: |
           python --version
           pip --version
+
+      - run: |
+          echo "RUNNER_TOOL_CACHE=$RUNNER_TOOL_CACHE"
