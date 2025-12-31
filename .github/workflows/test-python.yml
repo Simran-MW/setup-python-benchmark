@@ -11,24 +11,14 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
-          clean: false
-          persist-credentials: false
-
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.10.14'
+          python-version: '3.11'
 
       - name: Check Python
         run: |
-          which python
           python --version
           pip --version
-
-      - name: Check tool cache
-        run: |
-          echo "RUNNER_TOOL_CACHE=$RUNNER_TOOL_CACHE"
 
