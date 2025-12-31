@@ -15,8 +15,13 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
-          
+          python-version: '3.12.1'
+
+      - name: Verify Python
+        run: |
+            python --version
+            which python
+            
       - name: Check Python
         run: |
           python --version
